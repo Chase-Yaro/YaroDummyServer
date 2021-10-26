@@ -1,0 +1,13 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Recent activity:</h1>
+    @foreach (var result in Model.Results)
+    {
+        <p>@result.TimeStamp: @result.ResultText</p>
+    }
+</div>
